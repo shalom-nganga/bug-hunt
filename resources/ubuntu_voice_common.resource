@@ -7,3 +7,4 @@ Resource          pages/register_page.resource
 Resource          pages/chat_page.resource
 Resource          pages/dashboard_page.resource
 Resource          pages/agent_page.resource
+Resource          pages/evaluations_page.resource
