@@ -13,6 +13,7 @@ ${CHAT_URL}                 ${BASE_URL}/chat
 ${DASHBOARD_URL}             ${BASE_URL}/dashboard
 ${STATISTICS_URL}            ${BASE_URL}/statistics
 ${EVALUATIONS_URL}           ${BASE_URL}/evaluations
+${CREATE_AGENT_URL}          ${BASE_URL}/documents
 ${GUARDRAILS_URL}            ${BASE_URL}/guardrails
 
 # --- Browser capabilities ---
