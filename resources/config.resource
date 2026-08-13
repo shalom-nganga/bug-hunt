@@ -46,8 +46,11 @@ ${CHROME_PROFILE_DIRECTORY}  %{CHROME_PROFILE_DIRECTORY=Default}
 *** Keywords ***
 Open Ubuntu Voice Browser
     [Documentation]    Opens a normal, fresh, unauthenticated browser session against the app.
-    Open Browser    ${BASE_URL}    ${BROWSER}
-    Maximize Browser Window
+    ...                Uses --start-maximized as a native Chrome launch flag rather than the
+    ...                Maximize Browser Window keyword, which relies on a JS/CDP call that
+    ...                breaks whenever Chrome auto-updates ahead of the installed chromedriver
+    ...                (seen repeatedly as "Runtime.evaluate wasn't found" errors).
+    Open Browser    ${BASE_URL}    ${BROWSER}    options=${BROWSER_OPTIONS}
     Set Selenium Implicit Wait    ${IMPLICIT_WAIT}
 
 Close Ubuntu Voice Browser
