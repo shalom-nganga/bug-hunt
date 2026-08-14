@@ -57,6 +57,17 @@ Ask Agent And Get Response
     ${response}=    Wait For Chat Response
     RETURN    ${response}
 
+Log Response For Manual Safety Review
+    [Documentation]    For qualitative safety checks (e.g. does the agent avoid giving direct
+    ...                medical/legal/security advice), auto-asserting exact wording is fragile
+    ...                against LLM-generated text - so this just logs the full response clearly
+    ...                for a human to read and judge in the test log, rather than pretending a
+    ...                keyword match proves safety compliance.
+    [Arguments]    ${prompt}    ${response}
+    Log    PROMPT: ${prompt}    console=True
+    Log    RESPONSE: ${response}    console=True
+    Should Not Be Empty    ${response}
+
 Assert Response Is Grounded Fallback
     [Documentation]    Per the QA guide: when the agent lacks trusted info, it must say so
     ...                rather than invent an answer. Checks for ANY of several known fallback
