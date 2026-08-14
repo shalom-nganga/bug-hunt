@@ -9,7 +9,7 @@ Resource          ../config.resource
 # --- Agent selector: a standard <select>, URL stays static at /chat regardless of choice ---
 ${AGENT_SELECT_DROPDOWN}     css:select#chat-company
 ${AGENT_ID_SUDAN_PEACE}      7f06af39-2c2a-4051-99da-bd5adb0d4074
-${AGENT_ID_SOMALIA}          e7a09fc9-2f01-4ba8-be54-e863e62f63a8
+${AGENT_ID_SOMALIA}          91772425-f95b-4132-aef2-cbd46b09bef6
 ${AGENT_ID_CONGO_PEACE}      42201392-68ee-4288-85d8-983e1a88d8e3
 
 # --- Confirmed input/controls ---
